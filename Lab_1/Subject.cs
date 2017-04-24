@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Lab_1
 {
-    //Пара
+    /// <summary>
+    /// Предмет
+    /// </summary>
     class Subject
     {
         private string name;

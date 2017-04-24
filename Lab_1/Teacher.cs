@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace Lab_1
 {
-    //Викладач
+    /// <summary>
+    /// Викладач
+    /// </summary>
     class Teacher : Person
     {
         public Teacher(string name, Gender gender, List<Subject> Rozklad)
@@ -17,6 +19,11 @@ namespace Lab_1
             this.Rozklad = Rozklad;
         }
 
+        /// <summary>
+        /// Викладач відвідав пару
+        /// </summary>
+        /// <param name="subject">Пара</param>
+        /// <exception cref="Lab_1.MyExceptions.SubjectOutOfRozkladException">Якщо предмета немає в розкладі</exception>
         public override void VisitSubject(Subject subject)
         {
             if (Rozklad.Where(s => s.ToString() == subject.ToString()).FirstOrDefault() != null)
